@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "14241592-8785-4ce5-972f-5bb5b735151d",
+		"name": "NEWS  API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36754738"
+	},
+	"item": [
+		{
+			"name": "GET Obtener Articulos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/articles?query=col&category=&page=1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "col",
+							"description": "Término de búsqueda para filtrar artículos por palabra clave"
+						},
+						{
+							"key": "category",
+							"value": "",
+							"description": "Categoría de noticias para filtrar"
+						},
+						{
+							"key": "language",
+							"value": null,
+							"description": "Código de idioma ",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Número de página para la paginación"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Número de artículos por página.",
+							"disabled": true
+						},
+						{
+							"key": "fromDate",
+							"value": null,
+							"description": "Fecha de inicio para filtrar artículos",
+							"disabled": true
+						},
+						{
+							"key": "toDate",
+							"value": null,
+							"description": "Fecha de finalización para filtrar artículos",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Obtener eventos destacados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/breaking-events",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"breaking-events"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": null,
+							"description": "Código de idioma",
+							"disabled": true
+						},
+						{
+							"key": "region",
+							"value": null,
+							"description": "Región geográfica para filtrar eventos.",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "politics",
+							"description": "Categoría de eventos para filtrar",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Número de página para la paginación.",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Número de eventos por página.",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Detalles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/articles/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"articles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "82",
+							"description": "El identificador único del artículo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
